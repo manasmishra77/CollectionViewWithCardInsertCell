@@ -14,6 +14,8 @@
 		B65F413F22303BA1008C57DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65F413D22303BA1008C57DF /* LaunchScreen.storyboard */; };
 		B65F414A22303BA1008C57DF /* CollectionViewWithCardInsertCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F414922303BA1008C57DF /* CollectionViewWithCardInsertCellTests.swift */; };
 		B65F415522303BA1008C57DF /* CollectionViewWithCardInsertCellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F415422303BA1008C57DF /* CollectionViewWithCardInsertCellUITests.swift */; };
+		B65F416422303D02008C57DF /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F416222303D02008C57DF /* CardCollectionViewCell.swift */; };
+		B65F416522303D02008C57DF /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B65F416322303D02008C57DF /* CardCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		B65F415022303BA1008C57DF /* CollectionViewWithCardInsertCellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewWithCardInsertCellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65F415422303BA1008C57DF /* CollectionViewWithCardInsertCellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewWithCardInsertCellUITests.swift; sourceTree = "<group>"; };
 		B65F415622303BA1008C57DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B65F416222303D02008C57DF /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		B65F416322303D02008C57DF /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				B65F413422303B9F008C57DF /* AppDelegate.swift */,
 				B65F413622303B9F008C57DF /* ViewController.swift */,
+				B65F416222303D02008C57DF /* CardCollectionViewCell.swift */,
+				B65F416322303D02008C57DF /* CardCollectionViewCell.xib */,
 				B65F413822303B9F008C57DF /* Main.storyboard */,
 				B65F413B22303BA1008C57DF /* Assets.xcassets */,
 				B65F413D22303BA1008C57DF /* LaunchScreen.storyboard */,
@@ -229,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65F416522303D02008C57DF /* CardCollectionViewCell.xib in Resources */,
 				B65F413F22303BA1008C57DF /* LaunchScreen.storyboard in Resources */,
 				B65F413C22303BA1008C57DF /* Assets.xcassets in Resources */,
 				B65F413A22303B9F008C57DF /* Main.storyboard in Resources */,
@@ -257,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65F413722303B9F008C57DF /* ViewController.swift in Sources */,
+				B65F416422303D02008C57DF /* CardCollectionViewCell.swift in Sources */,
 				B65F413522303B9F008C57DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
