@@ -39,19 +39,36 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = cardCollectionview.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as! CardCollectionViewCell
-        cell.containerView1.backgroundColor = .white
-        cell.containerView2.alpha = 0
-        cell.topContainerView2To1.constant = screenheight/4
-        cell.heightContainerView2.constant = screenheight/4
+        //cell.containerView1.backgroundColor = .white
+        //cell.containerView2.alpha = 0
+        //cell.topContainerView2To1.constant = screenheight/4
+        //cell.heightContainerView2.constant = screenheight/4
+        cell.topContainerView2To1.constant = 0
         let timeDelay: Double = Double(indexPath.row)/50
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             print(timeDelay)
-            cell.topContainerView2To1.constant = 0
-            UIView.animate(withDuration: 0.3, delay: TimeInterval(timeDelay), options: UIView.AnimationOptions.curveEaseIn, animations: {
-                cell.containerView2.alpha = 1
-                cell.layoutIfNeeded()
-            }, completion: nil)
             
+//            UIView.animate(withDuration: 0.3, delay: TimeInterval(timeDelay), options: UIView.AnimationOptions.curveEaseIn, animations: {
+//                cell.containerView2.alpha = 1
+//                cell.layoutIfNeeded()
+//            }, completion: nil)
+            
+        }
+        cell.containerView2.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            UIView.animate(withDuration: 0.5, animations: {
+                cell.containerView2.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            }, completion: { (_) in
+                UIView.animate(withDuration: 0.3, animations: {
+                     cell.containerView2.transform = CGAffineTransform(scaleX: 0.85, y: 0.85)
+                }, completion: { (_) in
+                    UIView.animate(withDuration: 0.2, animations: {
+                        cell.containerView2.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                    }, completion: { (_) in
+                        
+                    })
+                })
+            })
         }
         
         return cell
